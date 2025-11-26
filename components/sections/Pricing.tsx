@@ -89,7 +89,7 @@ export default function Pricing() {
           data-aos-duration="1000"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold leading-[44px] text-slate-800 mb-6">
-            Get the only custom super card you'll ever need
+            Get the only custom super card you&apos;ll ever need
           </h2>
           <p className="text-base sm:text-lg text-slate-500 max-w-2xl mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor

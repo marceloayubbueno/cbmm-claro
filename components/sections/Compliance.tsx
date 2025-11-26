@@ -120,7 +120,7 @@ export default function Compliance() {
                       <div className="mb-4 h-12 bg-slate-700 rounded flex items-center justify-center">
                         <span className="text-slate-400 text-xs">Signature</span>
                       </div>
-                      <p className="text-white text-lg mb-4 italic">"{testimonial.quote}"</p>
+                      <p className="text-white text-lg mb-4 italic">&ldquo;{testimonial.quote}&rdquo;</p>
                       <div className="text-slate-300 text-sm">
                         <span className="font-semibold">{testimonial.name}</span> —{" "}
                         <span>{testimonial.role}</span>

@@ -81,7 +81,7 @@ export default function SectionAlternate({
                 <div className="w-8 h-8 rounded-full bg-blue-500 flex-shrink-0" />
                 <div>
                   <blockquote className={`${isDark ? "text-slate-300" : "text-slate-700"} italic mb-2`}>
-                    "{quote}"
+                    &ldquo;{quote}&rdquo;
                   </blockquote>
                   {quoteAuthor && (
                     <p className={`text-sm ${isDark ? "text-slate-400" : "text-slate-500"}`}>

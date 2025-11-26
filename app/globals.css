@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-aspekta: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-aspekta: var(--font-inter, 'Inter', system-ui, -apple-system, sans-serif);
 }
 
 * {
