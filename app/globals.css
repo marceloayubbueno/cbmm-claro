@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-aspekta: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(30, 41, 59);
+  background: #FFFFFF;
+  font-family: var(--font-aspekta);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* AOS Animation Styles - Deixar o AOS funcionar nativamente */
+/* Removemos qualquer override que possa bloquear */
+[data-aos] {
+  pointer-events: auto;
+}
+
+/* Swiper Custom Styles */
+.swiper-pagination-bullet {
+  background: #3B82F6;
+  opacity: 0.3;
+  width: 8px;
+  height: 8px;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.testimonial-carousel .swiper-slide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.testimonial-carousel .swiper-slide-active {
+  opacity: 1;
+}
+
+/* Animações para elementos flutuantes 3D */
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-25px) translateX(10px);
+    opacity: 1;
+  }
+}
+
+@keyframes floatDown {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(20px) translateX(-10px);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateFloat {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(180deg) translateY(-15px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: rotate(360deg) translateY(0px);
+    opacity: 0.5;
+  }
+}
+
+/* Animações para efeitos de fotografia */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes focusPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+/* Menu Animations */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  from { 
+    transform: translateX(-100%); 
+    opacity: 0;
+  }
+  to { 
+    transform: translateX(0); 
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
