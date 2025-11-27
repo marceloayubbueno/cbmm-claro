@@ -22,7 +22,7 @@ export default function Button({
   
   const variants = {
     primary: "bg-slate-800 text-slate-100 hover:bg-slate-900",
-    secondary: "bg-blue-500 text-blue-50 hover:bg-blue-600",
+    secondary: "bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white",
     outline: "border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-blue-50",
   };
 
