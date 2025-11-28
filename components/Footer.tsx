@@ -1,109 +1,42 @@
-"use client";
+'use client'
 
-import Link from "next/link";
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Footer() {
+
   return (
-    <footer className="relative bg-slate-800 text-white">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-testimonial opacity-50" aria-hidden="true" />
-
-      {/* Footer Illustration Placeholder */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-slate-700/50" aria-hidden="true" />
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32 pb-12">
-        {/* Footer Blocks */}
-        <div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
-          data-aos="fade-up"
-          data-aos-delay="150"
-          data-aos-duration="1000"
-        >
-          {/* Logo CBMM Block */}
-          <div className="col-span-1">
-            <Link 
-              href="https://cbmm.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="CBMM"
-              className="inline-block mb-6"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">C</span>
-                </div>
-                <span className="text-white font-bold text-xl">CBMM</span>
-              </div>
-            </Link>
-            <p className="text-slate-300 text-sm mb-4">
-              Visit our website for more information about CBMM.
-            </p>
-            <Link
-              href="https://cbmm.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 text-sm transition-colors inline-flex items-center gap-2"
-            >
-              cbmm.com
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-            </Link>
-          </div>
-
-          {/* Nossos Valores CBMM */}
-          <div className="col-span-1">
-            <h6 className="text-sm font-bold text-white mb-4">Nossos Valores CBMM</h6>
-            <p className="text-slate-300 text-sm leading-relaxed mb-4">
-              Os valores da CBMM guiam nossas ações e decisões, fortalecendo nossa cultura organizacional e promovendo excelência em tudo que fazemos.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <span className="text-xs px-3 py-1 bg-slate-700/50 rounded-full text-slate-300">Excelência</span>
-              <span className="text-xs px-3 py-1 bg-slate-700/50 rounded-full text-slate-300">Integridade</span>
-              <span className="text-xs px-3 py-1 bg-slate-700/50 rounded-full text-slate-300">Inovação</span>
-              <span className="text-xs px-3 py-1 bg-slate-700/50 rounded-full text-slate-300">Sustentabilidade</span>
-            </div>
-          </div>
-
-          {/* Ciclo de Gente */}
-          <div className="col-span-1">
-            <h6 className="text-sm font-bold text-white mb-4">Ciclo de Gente</h6>
-            <p className="text-slate-300 text-sm leading-relaxed">
-              O Ciclo de Gente é um programa estratégico da CBMM que promove o desenvolvimento e crescimento dos nossos colaboradores através de avaliações, gestão de metas e desenvolvimento contínuo.
-            </p>
-          </div>
+    <footer className="relative overflow-hidden bg-gradient-to-b from-[#020617] via-[#041026] to-[#071a34] text-white border-t border-white/10 py-10">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(37,150,255,0.22),_transparent_60%)]"
+      />
+      <div className="container relative mx-auto px-4 max-w-6xl flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col gap-2 text-white">
+          <svg className="w-32" viewBox="0 0 130 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M45.607 24.2478H41.4686C38.2728 24.2501 35.2066 22.9981 32.9428 20.7666C30.6789 18.5351 29.4022 15.5062 29.3928 12.3446V11.9918C29.4019 8.82977 30.6786 5.80045 32.9428 3.56863C35.207 1.33682 38.2736 0.0848246 41.4698 0.0874063H45.607V7.57873H41.4686C40.2842 7.57808 39.1479 8.04219 38.3089 8.86927C37.4699 9.69634 36.9967 10.8189 36.9932 11.9906V12.3434C36.9967 13.5151 37.4699 14.6377 38.3089 15.4647C39.1479 16.2918 40.2842 16.7559 41.4686 16.7553H45.607V24.2478Z" fill="currentColor"></path>
+            <path d="M63.8431 11.2789C64.4221 10.6156 64.8449 9.83322 65.0808 8.98843C65.3167 8.14364 65.3598 7.25754 65.2071 6.39423L65.1875 6.28632C64.8795 4.54951 63.9623 2.97577 62.5973 1.84194C61.2322 0.708119 59.5068 0.0868414 57.7244 0.0874027H48.1241V24.2478H54.9377V6.6464H56.7697C57.1497 6.6464 57.5141 6.79572 57.7827 7.06151C58.0514 7.3273 58.2023 7.6878 58.2023 8.06368C58.2023 8.43957 58.0514 8.80006 57.7827 9.06585C57.5141 9.33164 57.1497 9.48096 56.7697 9.48096H56.2293V14.1862H57.3175C57.8112 14.1862 58.2847 14.3802 58.6338 14.7256C58.9829 15.071 59.179 15.5394 59.179 16.0278C59.179 16.5163 58.9829 16.9847 58.6338 17.33C58.2847 17.6754 57.8112 17.8694 57.3175 17.8694H56.2293V24.2466H59.3984C60.3804 24.2343 61.3503 24.0306 62.2527 23.6473C63.1552 23.2639 63.9724 22.7084 64.6577 22.0125C65.3431 21.3166 65.8831 20.4939 66.2469 19.5914C66.6107 18.6889 66.7913 17.7244 66.7781 16.7528C66.7824 15.671 66.5161 14.605 66.0029 13.6497C65.4898 12.6944 64.7457 11.8795 63.837 11.2777" fill="currentColor"></path>
+            <path d="M90.0412 1.57984e-06C88.7264 -0.000622582 87.432 0.321737 86.2742 0.938147C85.1164 1.55456 84.1314 2.44573 83.4077 3.53168C82.6838 2.44556 81.6987 1.55428 80.5407 0.937859C79.3827 0.32144 78.088 -0.000823372 76.773 1.57984e-06C72.3822 1.57984e-06 68.8234 2.48418 68.8234 7.86474V24.2477H76.3625V8.21997C76.3566 8.00731 76.3938 7.79562 76.4719 7.59743C76.5501 7.39924 76.6676 7.21856 76.8176 7.06606C76.9675 6.91357 77.1468 6.79236 77.3449 6.70959C77.543 6.62682 77.7559 6.58418 77.9709 6.58418C78.186 6.58418 78.3988 6.62682 78.5969 6.70959C78.795 6.79236 78.9744 6.91357 79.1243 7.06606C79.2742 7.21856 79.3917 7.39924 79.4699 7.59743C79.5481 7.79562 79.5853 8.00731 79.5794 8.21997V24.2477H87.2336V8.21997C87.2277 8.00731 87.2649 7.79562 87.3431 7.59743C87.4212 7.39924 87.5387 7.21856 87.6887 7.06606C87.8386 6.91357 88.0179 6.79236 88.216 6.70959C88.4141 6.62682 88.627 6.58418 88.842 6.58418C89.0571 6.58418 89.2699 6.62682 89.468 6.70959C89.6661 6.79236 89.8454 6.91357 89.9954 7.06606C90.1453 7.21856 90.2628 7.39924 90.341 7.59743C90.4192 7.79562 90.4564 8.00731 90.4505 8.21997V24.2477H97.9895V7.86474C97.9895 2.48418 94.4357 1.57984e-06 90.0399 1.57984e-06" fill="currentColor"></path>
+            <path d="M121.724 1.19289e-06C120.41 -0.000622969 119.115 0.321736 117.957 0.938147C116.8 1.55456 115.815 2.44573 115.091 3.53168C114.367 2.44563 113.382 1.55441 112.224 0.938004C111.066 0.321594 109.771 -0.000715581 108.456 1.19289e-06C104.065 1.19289e-06 100.507 2.48418 100.507 7.86474V24.2477H108.046V8.21997C108.046 7.79778 108.215 7.39288 108.517 7.09435C108.819 6.79582 109.228 6.62811 109.655 6.62811C110.082 6.62811 110.491 6.79582 110.793 7.09435C111.094 7.39288 111.264 7.79778 111.264 8.21997V24.2477H118.918V8.21997C118.918 7.79778 119.088 7.39288 119.389 7.09435C119.691 6.79582 120.1 6.62811 120.527 6.62811C120.954 6.62811 121.363 6.79582 121.665 7.09435C121.967 7.39288 122.136 7.79778 122.136 8.21997V24.2477H129.675V7.86474C129.675 2.48418 126.121 1.19289e-06 121.726 1.19289e-06" fill="currentColor"></path>
+            <path d="M12.8674 0.0874023H6.16532L0 11.6051H12.8674V0.0874023Z" fill="currentColor"></path>
+            <path d="M26.8855 11.6051H20.1798L14.0144 0.0874023H26.8818L26.8855 11.6051Z" fill="currentColor"></path>
+            <path d="M0.00241089 12.73H6.70817L12.8735 24.2476H0.00241089V12.73Z" fill="currentColor"></path>
+            <path d="M14.0144 24.2452H20.7202L26.8855 12.7275H14.0181L14.0144 24.2452Z" fill="currentColor"></path>
+          </svg>
+          <a href="https://cbmm.com" target="_blank" rel="noopener noreferrer" className="hover:text-cbmm-blue transition">
+            cbmm.com
+          </a>
         </div>
-
-        {/* Bottom Area */}
-        <div 
-          className="border-t border-slate-700 pt-8"
-          data-aos="fade-up"
-          data-aos-delay="300"
-          data-aos-duration="1000"
-        >
-          <p className="text-slate-400 text-sm text-center">
-            © {new Date().getFullYear()} CBMM. Todos os direitos reservados. |{" "}
-            <Link 
-              href="https://cbmm.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:underline"
-            >
-              cbmm.com
-            </Link>
-          </p>
+        <div className="max-w-2xl">
+          <Image
+            src="/images/rodape-pt.svg"
+            alt="Nossos Valores CBMM"
+            width={800}
+            height={320}
+            className="w-full h-auto"
+          />
         </div>
       </div>
     </footer>
-  );
+  )
 }
