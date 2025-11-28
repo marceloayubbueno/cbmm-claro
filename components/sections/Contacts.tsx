@@ -46,7 +46,7 @@ const contactCards: Contact[] = [
 
 export default function Contacts() {
   return (
-    <section className="relative py-20 lg:py-24 w-full overflow-hidden" style={{ backgroundColor: '#f8fafc' }}>
+    <section className="relative py-32 lg:py-40 w-full overflow-hidden" style={{ backgroundColor: '#f8fafc' }}>
       {/* Background animado com gradientes sutis */}
       <div className="absolute inset-0 pointer-events-none z-0" aria-hidden="true">
         {/* Gradiente principal */}
@@ -154,7 +154,7 @@ export default function Contacts() {
                 </div>
 
                 {/* Título */}
-                <h3 className="relative text-lg font-bold text-slate-800 mb-6 text-center transition-all duration-300">
+                <h3 className="relative text-lg font-bold text-slate-800 mb-6 text-center group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-cyan-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                   {card.title}
                 </h3>
 

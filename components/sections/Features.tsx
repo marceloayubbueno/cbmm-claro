@@ -29,7 +29,7 @@ const features: Feature[] = [
 
 export default function Features() {
   return (
-    <section className="py-20 lg:py-24 bg-white w-full">
+    <section className="pt-24 lg:pt-32 pb-32 lg:pb-40 bg-white w-full">
       <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-20">
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12 w-full">
           {features.map((feature, index) => {
@@ -37,14 +37,14 @@ export default function Features() {
             return (
               <div
                 key={index}
-                className="group relative text-center bg-white rounded-3xl p-8 shadow-md border border-gray-100 hover:shadow-2xl transition-all duration-300"
+                className="group relative flex flex-col text-center bg-white rounded-3xl p-10 shadow-md border border-gray-100 hover:shadow-2xl transition-all duration-300"
                 data-aos="fade-up"
                 data-aos-delay={index * 150}
                 data-aos-duration="1000"
               >
                 {/* Icon with gradient background - seguindo padrão do projeto de referência */}
                 <div 
-                  className="relative mb-6 flex justify-center items-center"
+                  className="relative mb-8 flex justify-center items-center"
                   data-aos="zoom-in" 
                   data-aos-delay={index * 150 + 100}
                   data-aos-duration="800"
@@ -57,12 +57,12 @@ export default function Features() {
                 </div>
                 
                 {/* Title */}
-                <h4 className="text-xl font-bold text-slate-800 mb-6 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-cyan-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                <h4 className="text-xl font-bold text-slate-800 mb-8 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-cyan-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                   {feature.title}
                 </h4>
                 
                 {/* Button */}
-                <div>
+                <div className="mt-auto">
                   <Button
                     href={feature.href}
                     variant="secondary"

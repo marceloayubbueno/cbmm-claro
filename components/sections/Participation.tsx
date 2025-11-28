@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Participation() {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <section className="relative py-12 lg:py-8 overflow-hidden" style={{ backgroundColor: '#111827' }}>
+    <section className="relative pt-8 lg:pt-5 pb-5 lg:pb-5 overflow-hidden bg-gradient-to-b from-[#020617] via-[#041026] to-[#071a34] text-white">
       {/* Curva na parte superior - espelhando o efeito do Hero (curva para baixo) */}
       <div 
         className="absolute top-0 left-0 w-full h-32 lg:h-40 pointer-events-none z-10"
@@ -26,56 +26,11 @@ export default function Participation() {
         </svg>
       </div>
 
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-testimonial opacity-50" aria-hidden="true" />
-
-      {/* Sistema de Iluminação Tecnológica */}
-      <div className="absolute inset-0 pointer-events-none z-0" aria-hidden="true">
-        {/* Luz Principal - Canto superior direito */}
-        <div 
-          className="absolute rounded-full"
-          style={{
-            width: '600px',
-            height: '600px',
-            background: 'radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.3) 0%, rgba(37, 99, 235, 0.2) 25%, rgba(6, 182, 212, 0.15) 50%, transparent 75%)',
-            filter: 'blur(80px)',
-            transform: 'translate(20%, -20%)',
-          }}
-        />
-        
-        {/* Luz Secundária - Centro esquerdo */}
-        <div 
-          className="absolute rounded-full"
-          style={{
-            width: '500px',
-            height: '500px',
-            background: 'radial-gradient(circle at 30% 50%, rgba(96, 165, 250, 0.25) 0%, rgba(59, 130, 246, 0.15) 30%, rgba(6, 182, 212, 0.1) 55%, transparent 80%)',
-            filter: 'blur(70px)',
-            transform: 'translate(-15%, 10%)',
-          }}
-        />
-        
-        {/* Luz de Destaque - Canto inferior direito */}
-        <div 
-          className="absolute rounded-full"
-          style={{
-            width: '450px',
-            height: '450px',
-            background: 'radial-gradient(circle at 60% 70%, rgba(37, 99, 235, 0.2) 0%, rgba(6, 182, 212, 0.15) 35%, transparent 70%)',
-            filter: 'blur(65px)',
-            transform: 'translate(10%, 30%)',
-          }}
-        />
-        
-        {/* Linhas de luz tecnológica */}
-        <div 
-          className="absolute top-0 left-0 w-full h-full"
-          style={{
-            background: 'linear-gradient(135deg, transparent 0%, rgba(59, 130, 246, 0.05) 25%, transparent 50%, rgba(6, 182, 212, 0.05) 75%, transparent 100%)',
-            filter: 'blur(2px)',
-          }}
-        />
-      </div>
+      {/* Background Radial Gradient - Mesmo do Footer */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(37,150,255,0.22),_transparent_60%)]"
+      />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
