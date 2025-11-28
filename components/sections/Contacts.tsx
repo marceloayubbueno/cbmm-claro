@@ -46,42 +46,11 @@ const contactCards: Contact[] = [
 
 export default function Contacts() {
   return (
-    <section className="relative py-32 lg:py-40 w-full overflow-hidden" style={{ backgroundColor: '#f8fafc' }}>
-      {/* Background animado com gradientes sutis */}
-      <div className="absolute inset-0 pointer-events-none z-0" aria-hidden="true">
-        {/* Gradiente principal */}
-        <div 
-          className="absolute inset-0 opacity-40"
-          style={{
-            background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(6, 182, 212, 0.06) 50%, rgba(99, 102, 241, 0.08) 100%)',
-            backgroundSize: '200% 200%',
-            animation: 'gradientShift 8s ease infinite',
-          }}
-        />
-        
-        {/* Luzes decorativas */}
-        <div 
-          className="absolute rounded-full"
-          style={{
-            width: '600px',
-            height: '600px',
-            background: 'radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.1) 40%, transparent 70%)',
-            filter: 'blur(60px)',
-            top: '-10%',
-            right: '10%',
-          }}
-        />
-        <div 
-          className="absolute rounded-full"
-          style={{
-            width: '500px',
-            height: '500px',
-            background: 'radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(59, 130, 246, 0.08) 40%, transparent 70%)',
-            filter: 'blur(50px)',
-            bottom: '10%',
-            left: '10%',
-          }}
-        />
+    <section className="relative py-32 lg:py-40 w-full overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+      {/* Background Elements - Mesmo padrão do Hero */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-32 w-80 h-80 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-32 w-80 h-80 bg-gradient-to-br from-cyan-600 to-blue-500 rounded-full opacity-30 blur-3xl"></div>
       </div>
 
       <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-20 relative z-10">
@@ -110,27 +79,8 @@ export default function Contacts() {
               data-aos-delay={index * 150}
               data-aos-duration="1000"
             >
-              {/* Card com efeito de vidro embaçado */}
-              <div
-                className="relative rounded-2xl p-8 h-full text-center transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02]"
-                style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.7)',
-                  backdropFilter: 'blur(20px)',
-                  WebkitBackdropFilter: 'blur(20px)',
-                  border: '1px solid rgba(255, 255, 255, 0.5)',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
-                  e.currentTarget.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.5)';
-                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8)';
-                }}
-              >
+              {/* Card com glassmorphism - Mesmo padrão do Hero */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-8 h-full text-center hover:bg-white/10 transition-all duration-300 group">
 
                 {/* Ícone do card */}
                 <div 
@@ -139,12 +89,7 @@ export default function Contacts() {
                   data-aos-delay={index * 150 + 100}
                   data-aos-duration="800"
                 >
-                  <div
-                    className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"
-                    style={{
-                      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
-                    }}
-                  >
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {card.type === "email" ? (
                       <Mail className="w-8 h-8 text-white" />
                     ) : (
@@ -154,7 +99,7 @@ export default function Contacts() {
                 </div>
 
                 {/* Título */}
-                <h3 className="relative text-lg font-bold text-slate-800 mb-6 text-center group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-cyan-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                <h3 className="text-lg font-semibold text-white mb-6 text-center">
                   {card.title}
                 </h3>
 
@@ -170,14 +115,14 @@ export default function Contacts() {
                         data-aos-duration="800"
                       >
                         <div className="flex items-center gap-2 mb-2">
-                          <User className="w-5 h-5 text-blue-500" />
-                          <span className="text-slate-800 font-semibold text-sm">
+                          <User className="w-5 h-5 text-blue-400" />
+                          <span className="text-white font-semibold text-sm">
                             {contact.name}
                           </span>
                         </div>
                         <a
                           href={`mailto:${contact.email}`}
-                          className="text-blue-600 hover:text-blue-700 text-sm transition-colors duration-300 flex items-center gap-2 group/link"
+                          className="text-gray-300 hover:text-cyan-400 text-sm transition-colors duration-300 flex items-center gap-2 group/link"
                         >
                           <Mail className="w-4 h-4 group-hover/link:scale-110 transition-transform duration-300" />
                           {contact.email}
@@ -189,7 +134,7 @@ export default function Contacts() {
 
                 {card.type === "info" && card.info && (
                   <p
-                    className="relative text-slate-600 text-sm leading-relaxed text-center"
+                    className="text-gray-300 text-sm leading-relaxed text-center"
                     data-aos="fade-up"
                     data-aos-delay={index * 150 + 200}
                     data-aos-duration="800"
