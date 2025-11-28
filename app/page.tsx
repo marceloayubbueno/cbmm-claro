@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/sections/Hero";
 import Features from "@/components/sections/Features";
 import Participation from "@/components/sections/Participation";
+import Contacts from "@/components/sections/Contacts";
 import SectionAlternate from "@/components/sections/SectionAlternate";
 import Cashback from "@/components/sections/Cashback";
 import GetStarted from "@/components/sections/GetStarted";
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <Features />
         <Participation />
+        <Contacts />
         <SectionAlternate
           variant="light"
           title="Build a flexible card program for your business needs"

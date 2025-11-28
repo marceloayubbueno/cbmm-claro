@@ -19,7 +19,7 @@ export default function Hero() {
         className="absolute bottom-0 left-0 w-full h-32 lg:h-40 pointer-events-none"
         aria-hidden="true"
       >
-        <svg
+                <svg
           className="absolute bottom-0 left-0 w-full h-full"
           viewBox="0 0 1440 160"
           preserveAspectRatio="none"

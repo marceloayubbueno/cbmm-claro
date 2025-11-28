@@ -29,9 +29,9 @@ const features: Feature[] = [
 
 export default function Features() {
   return (
-    <section className="py-20 lg:py-24 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+    <section className="py-20 lg:py-24 bg-white w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-20">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 w-full">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
